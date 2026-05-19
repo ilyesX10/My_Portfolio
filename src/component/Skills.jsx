@@ -8,10 +8,9 @@ import {
   FaCss3Alt,
   FaReact,
   FaGitAlt,
-  FaJs,
   FaPython 
 } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { SiTailwindcss,SiTypescript } from "react-icons/si";
 import { TbBrandAdobePhotoshop  } from "react-icons/tb";
 import { BsVectorPen } from "react-icons/bs";
 
@@ -57,8 +56,8 @@ export default function Skills() {
                         <span className='flex justify-center items-center font-extrabold'>Tailwind</span>
                     </div>
                     <div className="mx-6 flex gap-2 flex-col hover:scale-105 transition-all">
-                        <FaJs size={100} className='w-32 h-32 rounded-4xl hover:ring-white/80 ring-transparent ring-4 bg-indigo-500 p-10 dark:text-gray-100 text-white text-xl'/>
-                        <span className='flex justify-center items-center font-extrabold'>Javascript</span>
+                        <SiTypescript size={100} className='w-32 h-32 rounded-4xl hover:ring-white/80 ring-transparent ring-4 bg-indigo-500 p-10 dark:text-gray-100 text-white text-xl'/>
+                        <span className='flex justify-center items-center font-extrabold'>Typescript</span>
                     </div> 
                     <div className="mx-6 flex gap-2 flex-col hover:scale-105 transition-all">
                         <FaPython size={100} className='w-32 h-32 rounded-4xl hover:ring-white/80 ring-transparent ring-4 bg-indigo-500 p-10 dark:text-gray-100 text-white text-xl'/>
