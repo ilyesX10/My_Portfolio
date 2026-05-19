@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@font-face {
+  font-family: 'ArabicFont';
+  src: url('./assets/fonts/Almarai.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'LatinFont';
+  src: url('./assets/fonts/FiraCode.ttf') format('truetype');
+}
