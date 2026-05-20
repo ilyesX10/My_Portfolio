@@ -26,18 +26,16 @@ export default function Header(){
                 </div>
             </motion.div>
             <div className={`lg:col-span-1 col-span-3 flex flex-col gap-y-6 justify-center items-center`}>
-                <motion.div initial={{x:50,opacity:0}} transition={{duration:0.8}} animate={{x:0,opacity:1}} className="h-80 w-80 border-4 border-slate-700 dark:border-indigo-300 rounded-full overflow-hidden">
+                <motion.div initial={{x:50,opacity:0}} transition={{duration:0.8}} whileInView={{x:0,opacity:1}} viewport={{ once: true, amount: 0.3 }} className="h-80 w-80 border-4 border-slate-700 dark:border-indigo-300 rounded-full overflow-hidden">
                     <img className="w-full h-full object-cover" src={myPhoto} alt="My Photo" />
                 </motion.div>
-                <div className="">
-                    <motion.div initial={{opacity:0,x:50}} transition={{duration:0.8,delay:0.2,ease:"easeIn"}} animate={{opacity:1,x:0}} className="p-2 px-4 dark:bg-slate-700 bg-indigo-500 hover:bg-indigo-600 grid grid-cols-3 text-gray-100 dark:hover:bg-slate-800 rounded border-2 border-black dark:border-gray-300" type="button">
-                        <span className="col-span-2">{person[lang].status}</span>
+                <motion.div initial={{opacity:0,x:50}} transition={{duration:0.8,delay:0.2,ease:"easeIn"}} whileInView={{opacity:1,x:0}} viewport={{ once: true, amount: 0.3 }} className="p-2 px-4 dark:bg-slate-700 bg-indigo-500 hover:bg-indigo-600 grid grid-cols-3 text-gray-100 dark:hover:bg-slate-800 rounded border-2 border-black dark:border-gray-300" type="button">
+                    <span className="col-span-2">{person[lang].status}</span>
                         <span className="relative w-4 h-4 col-span-1 m-auto">
-                            <span className="absolute inset-x-0 w-full h-full rounded-full bg-emerald-400"></span>
-                            <span className="absolute inset-x-0 w-full h-full animate-ping rounded-full bg-emerald-400 opacity-90"></span>
-                        </span> 
-                    </motion.div>
-                </div>
+                        <span className="absolute inset-x-0 w-full h-full rounded-full bg-emerald-400"></span>
+                        <span className="absolute inset-x-0 w-full h-full animate-ping rounded-full bg-emerald-400 opacity-90"></span>
+                    </span> 
+                </motion.div>
             </div>
         </div>
         </div>
