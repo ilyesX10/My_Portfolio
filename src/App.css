@@ -13,4 +13,5 @@
 }
 html{
    scroll-behavior: smooth;
+   scroll-padding: 60px;
 }

@@ -8,12 +8,11 @@ import { mySiteInfo,curriculum } from "../infos";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../ThemeContext";
 function Roadmap() {
-  const {lang,setLang} = useContext(ThemeContext);
-  const {theme, setTheme} = useContext(ThemeContext);
-  const [ishover,setIshover] = useState(false)
+  const {lang} = useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext);
   return (
-    <section className={`${theme} p-4 dark:bg-slate-700 bg-indigo-300 border-b-4 dark:border-indigo-300 border-slate-700`}>
-      <h1 id="Curriculum" className="sm:text-4xl text-2xl dark:text-gray-100 text-slate-700 py-6 font-extrabold">// {mySiteInfo[lang].nav[1]}</h1>
+    <section id="Curriculum" className={`${theme} p-4 dark:bg-slate-700 bg-indigo-300 border-b-4 dark:border-indigo-300 border-slate-700`}>
+      <h1 className="sm:text-4xl text-2xl dark:text-gray-100 text-slate-700 py-6 font-extrabold">// {mySiteInfo[lang].nav[1]}</h1>
       <div dir="ltr">
         <VerticalTimeline className="p-4" lineColor="#6366F1">
         <VerticalTimelineElement

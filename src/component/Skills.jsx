@@ -15,11 +15,11 @@ import { TbBrandAdobePhotoshop  } from "react-icons/tb";
 import { BsVectorPen } from "react-icons/bs";
 
 export default function Skills() {
-    const {theme, setTheme} = useContext(ThemeContext);
-    const {lang,setLang} = useContext(ThemeContext);
+    const {theme} = useContext(ThemeContext);
+    const {lang} = useContext(ThemeContext);
   return (
-    <div dir ="ltr" className={`${theme} dark:bg-slate-700 bg-indigo-300 dark:text-gray-100 text-slate-700 p-4 `}>
-        <h1 dir={`${lang == "Ar"? "rtl":"ltr"}`} id="skills" className="z-1 sm:text-4xl text-2xl dark:text-gray-100 text-slate-700 py-6 font-extrabold">// {mySiteInfo[lang].nav[3]}</h1>
+    <section id="Skills" dir ="ltr" className={`${theme} dark:bg-slate-700 bg-indigo-300 dark:text-gray-100 text-slate-700 p-4 `}>
+        <h1 dir={`${lang == "Ar"? "rtl":"ltr"}`} className="z-1 sm:text-4xl text-2xl dark:text-gray-100 text-slate-700 py-6 font-extrabold">// {mySiteInfo[lang].nav[3]}</h1>
         <div className='overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]'>
             <Marquee
             speed={100}
@@ -66,6 +66,6 @@ export default function Skills() {
                 </div>
             </Marquee>
         </div>
-    </div>
+    </section>
   );
 }
