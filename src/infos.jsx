@@ -88,4 +88,33 @@
             },
         ],
         };
-export { person, mySiteInfo, curriculum };
+        const contactInfo = {
+            En:{
+                paragraph: "Have a project in mind? I'd love to hear about it. Send me a message and I'll get back to you as soon as possible.",
+                emailLabel: "Email",
+                email: "ilyesdrouiche00@gmail.com",
+                phoneLabel: "Phone",
+                phone:"+213 6-76-47-42-60",
+                addressLabel: "Address",
+                address: "Tlemcen, Algeria"
+            },
+            Fr: {
+                paragraph: "Avez-vous un projet en tête ? J’aimerais beaucoup en entendre parler. Envoyez-moi un message et je vous répondrai dès que possible.",
+                emailLabel: "Email",
+                email: "ilyesdrouiche00@gmail.com",
+                phoneLabel: "Téléphone",
+                phone:"+213 6-76-47-42-60",
+                addressLabel: "Adresse",
+                address: "Tlemcen, Algérie"
+            },
+            Ar: {
+                paragraph: "هل لديك مشروع في ذهنك؟ يسعدني كثيرًا أن أسمع عنه. أرسل لي رسالة وسأرد عليك في أقرب وقت ممكن.",
+                emailLabel: "البريد الإلكتروني",
+                email: "ilyesdrouiche00@gmail.com",
+                phoneLabel: "الهاتف",
+                phone:"+213 6-76-47-42-60",
+                addressLabel: "العنوان",
+                address: "تلمسان، الجزائر"
+            }
+        }
+export { person, mySiteInfo, curriculum, contactInfo };

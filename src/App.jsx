@@ -5,6 +5,8 @@ import { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
 import Roadmap from './component/Roadmap';
 import Skills from './component/Skills';
+import Contact from './component/Contact';
+
 function App() {
   const {lang,setLang} = useContext(ThemeContext);
   return (
@@ -14,6 +16,7 @@ function App() {
           <main>
             <Roadmap/>
             <Skills/>
+            <Contact/>
           </main>
       </div>
     </>

@@ -18,7 +18,7 @@ export default function Skills() {
     const {theme} = useContext(ThemeContext);
     const {lang} = useContext(ThemeContext);
   return (
-    <section id="Skills" dir ="ltr" className={`${theme} dark:bg-slate-700 bg-indigo-300 dark:text-gray-100 text-slate-700 p-4 `}>
+    <section id="Skills" dir ="ltr" className={`${theme} dark:bg-slate-700 bg-indigo-300 dark:text-gray-100 text-slate-700 p-4 border-b-4 dark:border-indigo-300 border-slate-700 `}>
         <h1 dir={`${lang == "Ar"? "rtl":"ltr"}`} className="z-1 sm:text-4xl text-2xl dark:text-gray-100 text-slate-700 py-6 font-extrabold">// {mySiteInfo[lang].nav[3]}</h1>
         <div className='overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]'>
             <Marquee
