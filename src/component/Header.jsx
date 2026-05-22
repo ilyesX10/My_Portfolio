@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 import { ArrowRight } from "lucide-react";
 import myPhoto from "../assets/images/myPhoto.JPG"
 import { person,mySiteInfo } from "../infos";
@@ -13,7 +12,6 @@ export default function Header(){
     const [isHoverBtn2,setHoverBtn2] = useState(false)
     return(
         <div className={`${theme} dark:bg-slate-700 bg-indigo-300`}>
-        <Navbar/>
         <div id="About Me" className={`${theme} pt-20 flex xl:flex-row flex-col border-b-4 dark:border-indigo-300 border-slate-700 p-4`}>
             <motion.div initial={{x:-50,opacity:0}} transition={{duration:0.8}} whileInView={{x:0,opacity:1}} className={`basis-3/4 sm:text-4xl text-2xl dark:text-gray-100 text-slate-700 p-2`}>
                 <h1 className="py-6 font-extrabold">// {mySiteInfo[lang].nav[0]}</h1>

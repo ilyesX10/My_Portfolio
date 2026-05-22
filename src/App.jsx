@@ -6,12 +6,14 @@ import { ThemeContext } from "./ThemeContext";
 import Roadmap from './component/Roadmap';
 import Skills from './component/Skills';
 import Contact from './component/Contact';
+import Navbar from "./component/Navbar";
 
 function App() {
   const {lang,setLang} = useContext(ThemeContext);
   return (
     <>
       <div dir={`${lang == "Ar"? "rtl":"ltr"}`} className={`${lang =="Ar"? "font-[ArabicFont]":"font-[LatinFont]"}`}>
+        <Navbar/>
         <Header/>
           <main>
             <Roadmap/>
