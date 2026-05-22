@@ -19,23 +19,12 @@ export default function Navbar(){
     const {lang,setLang} = useContext(ThemeContext);
     const {theme, setTheme} = useContext(ThemeContext);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
-    const [menuHeight, setMenuHeight] = useState(null);
     useEffect(() => {
         localStorage.setItem('theme', theme);
     }, [theme]);
     useEffect(()=>{
         localStorage.setItem('lang', lang);
     },[lang])
-    useEffect(() => {
-        if (menuClick) {
-            const updateHeight = () => setMenuHeight(window.innerHeight);
-            updateHeight();
-            window.addEventListener("resize", updateHeight);
-            return () => window.removeEventListener("resize", updateHeight);
-        } else {
-            setMenuHeight(null);
-        }
-    }, [menuClick]);
     useEffect(() => {
         function handleResize() {
             setIsMobile(window.innerWidth < 1024);
@@ -46,7 +35,7 @@ export default function Navbar(){
         window.removeEventListener("resize", handleResize);
         };}, []);
     return(
-        <nav style={menuHeight ? { minHeight: menuHeight } : undefined} className={`${theme} fixed top-0 right-0 left-0 z-50 backdrop-blur-2xl dark:bg-slate-transparent bg-transparent ${lang =="Ar"? "font-[ArabicFont]":"font-[LatinFont]"} border-b-4 dark:border-indigo-300 border-slate-700 grid grid-cols-6 ${menuClick && "grid-rows-3"} items-start py-4`}>
+        <nav className={`${theme} fixed top-0 right-0 ${menuClick && "h-[100vh]"} left-0 z-50 backdrop-blur-2xl dark:bg-slate-transparent bg-transparent ${lang =="Ar"? "font-[ArabicFont]":"font-[LatinFont]"} border-b-4 dark:border-indigo-300 border-slate-700 grid grid-cols-6 ${menuClick && "grid-rows-3"} items-center py-4`}>
             <motion.span initial={{opacity:0,y:-50}} transition={{duration:0.8}} whileInView={{opacity:1,y:0}} className={`lg:col-span-1 col-span-4 order-1 dark:drop-shadow-[0_0_0.5px_black] drop-shadow-[0_0_0.5px_white] dark:text-white text-slate-700 flex lg:justify-center justify-start px-2 xl:text-2xl lg:text-base text-2xl font-extrabold bg-transparent`}>&lt; {person[lang].logo}/ &gt;</motion.span>
             {isMobile ? (
                 menuClick && (
