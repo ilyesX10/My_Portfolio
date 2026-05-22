@@ -12,7 +12,7 @@ function App() {
   const {lang,setLang} = useContext(ThemeContext);
   return (
     <>
-      <div dir={`${lang == "Ar"? "rtl":"ltr"}`} className={`${lang =="Ar"? "font-[ArabicFont]":"font-[LatinFont]"}`}>
+      <div dir={`${lang == "Ar"? "rtl":"ltr"}`} className={`${lang =="Ar"? "font-[ArabicFont]":"font-[LatinFont] overflow-y-hidden"}`}>
         <Navbar/>
         <Header/>
           <main>
