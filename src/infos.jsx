@@ -117,4 +117,41 @@
                 address: "تلمسان، الجزائر"
             }
         }
-export { person, mySiteInfo, curriculum, contactInfo };
+const contactForm = {
+    En: {
+        label1: "Name",
+        placeH1: "Your Name",
+        label2: "Email",
+        placeH2: "Your@email.com",
+        label3: "Subject",
+        placeH3: "Project Title",
+        label4: "Message",
+        placeH4: "Tell me about your project...",
+        btn: "Send"
+    },
+
+    Fr: {
+        label1: "Nom",
+        placeH1: "Votre nom",
+        label2: "Email",
+        placeH2: "Votre@email.com",
+        label3: "Sujet",
+        placeH3: "Titre du projet",
+        label4: "Message",
+        placeH4: "Parlez-moi de votre projet...",
+        btn: "Envoyer"
+    },
+
+    Ar: {
+        label1: "الاسم",
+        placeH1: "اسمك",
+        label2: "البريد الإلكتروني",
+        placeH2: "your@email.com",
+        label3: "الموضوع",
+        placeH3: "عنوان المشروع",
+        label4: "الرسالة",
+        placeH4: "أخبرني عن مشروعك...",
+        btn: "إرسال"
+    }
+}
+export { person, mySiteInfo, curriculum, contactInfo,contactForm };
