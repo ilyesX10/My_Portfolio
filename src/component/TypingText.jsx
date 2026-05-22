@@ -88,7 +88,7 @@ export default function TypingText() {
   return (
     <div dir="ltr" className={`flex justify-start`}>
       <pre
-        className={`${theme} dark:border-indigo-300 border-3 border-slate-700 bg-slate-900 text-sm p-4 sm:p-5 rounded-xl font-mono text-white leading-6 w-full max-w-[90vw] sm:max-w-[600px] h-[150px] overflow-auto whitespace-pre overflow-x-auto text-left`}
+        className={`${theme} dark:border-indigo-300 border-3 border-slate-700 bg-slate-900 text-sm p-4 sm:p-5 rounded-xl font-mono text-white leading-6 w-full sm:max-w-[600px] h-[150px] overflow-auto whitespace-pre overflow-x-auto text-left`}
       >
         {output.map((item, index) => {
           if (!item) return null;
