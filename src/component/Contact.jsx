@@ -51,7 +51,7 @@ export default function Contact(){
             <section id="Contact" className={`${theme} dark:bg-slate-700 bg-indigo-300 p-4 sm:text-4xl text-2xl dark:text-gray-100 text-slate-700`}>
                 <h1 className="py-6 font-extrabold">// {mySiteInfo[lang].nav[4]}</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="text-xs lg:text-sm md:text-base">
+                    <div className="text-base lg:text-sm md:text-base">
                         <motion.p initial={{opacity:0,x:-50}} transition={{duration:0.8}} whileInView={{opacity:1,x:0}} className="text-justify text-base font-bold mb-4">{contactInfo[lang].paragraph}</motion.p>
                         <motion.div initial={{opacity:0,x:-50}} transition={{duration:0.8,delay:0.3}} whileInView={{opacity:1,x:0}} className="flex gap-2 flex-col py-4">
                             <div className="flex items-center gap-2 text-white">
