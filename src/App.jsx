@@ -13,6 +13,7 @@ function App() {
   return (
     <>
       <div dir={`${lang == "Ar"? "rtl":"ltr"}`} className={`${lang =="Ar"? "font-[ArabicFont]":"font-[LatinFont]"}`}>
+        <Navbar/>
         <Header/>
           <main>
             <Roadmap/>
