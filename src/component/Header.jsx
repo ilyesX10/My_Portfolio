@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import { ArrowRight } from "lucide-react";
-import myPhoto from "../assets/images/myPhoto.jpg"
+import myPhoto from "../assets/images/myPhoto.JPG"
 import { person,mySiteInfo } from "../infos";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../ThemeContext";
