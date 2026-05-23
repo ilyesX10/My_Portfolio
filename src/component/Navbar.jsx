@@ -46,7 +46,7 @@ export default function Navbar(){
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 0.3 }}
-                    className={`list-none ${menuClick && !isRectangle && "overflow-hidden"} ${menuClick && isRectangle && "max-h-40 overflow-y-scroll"} lg:col-span-3 col-span-6 lg:order-2 order-5 lg:justify-center`}
+                    className={`list-none ${menuClick && !isRectangle && "overflow-hidden"} ${menuClick && isRectangle && "max-h-45 overflow-y-scroll"} lg:col-span-3 col-span-6 lg:order-2 order-5 lg:justify-center`}
                   >
                     {mySiteInfo[lang].nav.map((e,index)=><motion.li variants={ulItem} key={e} className={`flex py-2 justify-center ${lang =="Fr"|| lang =="En"? "xl:text-base lg:text-sm text-3xl":"xl:text-xl lg:text-base text-3xl"}`}><a href={`#${mySiteInfo["En"].nav[index]}`} className={`${menuClick && isRectangle && "text-sm"} lg:drop-shadow-none drop-shadow-[0_0_0.5px_black] mx-4 dark:text-gray-300 text-slate-700 hover:text-white transition-all font-bold`} onClick={()=>setMenuClick((prev)=>false)}>{e}</a></motion.li>)}
                   </motion.ul>
@@ -56,8 +56,8 @@ export default function Navbar(){
                 {mySiteInfo[lang].nav.map((e,index)=><li key={{e}} className="flex py-2 justify-center"><a href={`#${mySiteInfo["En"].nav[index]}`} className={`${lang =="Fr"|| lang =="En"? "xl:text-base lg:text-sm text-3xl":"xl:text-xl lg:text-base text-3xl"} lg:drop-shadow-none drop-shadow-[0_0_0.5px_black] mx-4 dark:text-gray-300 text-slate-700 hover:text-white transition-all font-bold`}>{e}</a></li>)}
               </ul>
             )}
-            <motion.div initial={{scale:.8,opacity:0}} transition={{duration:0.8}} whileInView={{scale:1,opacity:1}} className={` lg:col-span-1 col-span-6 lg:flex ${menuClick? "flex":"hidden"} lg:order-3 order-6`}>
-                <div className={`${(menuClick && isRectangle)? "mx-2":"m-auto"} inline justify-center bg-indigo-400 dark:bg-slate-800 rounded-full dark:border-white border-slate-700 border-1 p-2`}>
+            <motion.div initial={{scale:.8,opacity:0}} transition={{duration:0.8}} whileInView={{scale:1,opacity:1}} className={`${menuClick && isRectangle && "scale-50"} lg:col-span-1 col-span-6 lg:flex ${menuClick? "flex":"hidden"} lg:order-3 order-6`}>
+                <div className={`m-auto inline justify-center bg-indigo-400 dark:bg-slate-800 rounded-full dark:border-white border-slate-700 border-1 p-2`}>
                     <span className={`text-base text-gray-300 hover:cursor-pointer ${lang == "En"? "bg-indigo-700":"bg-transparent"} rounded-full px-3 py-1 font-bold`} onClick={()=>{setLang((prev)=>"En")}}>En</span>
                     <span className={`text-base text-gray-300 hover:cursor-pointer ${lang == "Ar"? "bg-indigo-700":"bg-transparent"} rounded-full font-bold px-3 py-1`} onClick={()=>{setLang((prev)=>"Ar")}}>Ar</span>
                     <span className={`text-base text-gray-300 hover:cursor-pointer ${lang == "Fr"? "bg-indigo-700":"bg-transparent"} rounded-full font-bold px-3 py-1`} onClick={()=>{setLang((prev)=>"Fr")}}>Fr</span>
