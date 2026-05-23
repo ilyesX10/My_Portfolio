@@ -51,7 +51,7 @@ export default function Contact(){
             <section id="Contact" className={`${theme} dark:bg-slate-700 bg-indigo-300 p-4 sm:text-4xl text-2xl dark:text-gray-100 text-slate-700`}>
                 <h1 className="py-6 font-extrabold">// {mySiteInfo[lang].nav[4]}</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="text-base lg:text-sm md:text-base">
+                    <div className="text-base">
                         <motion.p initial={{opacity:0,x:-50}} transition={{duration:0.8}} whileInView={{opacity:1,x:0}} className="text-justify text-base font-bold mb-4">{contactInfo[lang].paragraph}</motion.p>
                         <motion.div initial={{opacity:0,x:-50}} transition={{duration:0.8,delay:0.3}} whileInView={{opacity:1,x:0}} className="flex gap-2 flex-col py-4">
                             <div className="flex items-center gap-2 text-white">
@@ -78,7 +78,7 @@ export default function Contact(){
                         </motion.div>
                     </div>
                     <motion.form onSubmit={handleSend} initial={{opacity:0,y:50}} transition={{duration:0.8}} whileInView={{opacity:1,y:0}} className="flex flex-col gap-6 xl:w-full sm:w-[90%] w-full m-auto">
-                        <div className="flex gap-2 text-xs lg:text-sm md:text-base">
+                        <div className="flex gap-2 text-lg md:text-lg">
                             <div className="grid grid-cols-2 gap-4 w-full">
                                 <div className="col-span-2 xs:col-span-1 flex flex-col">
                                     <label className="py-1" htmlFor="fullName">{contactForm[lang].label1}</label>
@@ -90,16 +90,16 @@ export default function Contact(){
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col text-xs lg:text-sm md:text-base">
+                        <div className="flex flex-col text-lg md:text-lg">
                             <label className="py-1" htmlFor="subject">{contactForm[lang].label3}</label>
                             <input required onChange={(e) => setFormData({...formData, subject: e.target.value})} className="h-12 p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" type="text" id="subject" placeholder={`${contactForm[lang].placeH3}`}/>
                         </div>
-                        <div className="flex flex-col text-xs lg:text-sm md:text-base">
+                        <div className="flex flex-col text-lg md:text-lg">
                             <label className="py-1" htmlFor="message">{contactForm[lang].label4}</label>
                             <textarea required onChange={(e) => setFormData({...formData, message: e.target.value})} className="h-32 resize-none p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" id="message" placeholder={`${contactForm[lang].placeH4}`}/>
                         </div>
-                        <div className="flex flex-col text-xs lg:text-sm md:text-base">
-                            <motion.button disabled={sending} whileTap={{scale:0.95}} transition={{type:spring}} type="submit" className="h-12 p-2 border-b-3 border-white font-extrabold rounded-lg dark:bg-indigo-300 bg-indigo-600 dark:text-slate-700 text-gray-300 text-lg">{contactForm[lang].btn}</motion.button>
+                        <div className="flex flex-col text-lg md:text-lg">
+                            <motion.button disabled={sending} whileTap={{scale:0.95}} transition={{type:spring}} type="submit" className="h-12 p-2 border-b-3 border-white font-extrabold rounded-lg dark:bg-indigo-300 bg-indigo-600 dark:text-slate-700 text-gray-300">{contactForm[lang].btn}</motion.button>
                         </div>
                     </motion.form>
                 </div>
