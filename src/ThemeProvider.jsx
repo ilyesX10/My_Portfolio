@@ -9,9 +9,10 @@ export function ThemeProvider({ children }) {
   const [lang,setLang] = useState(() => {
     return localStorage.getItem('lang') || 'En'; 
   })
+  const [isRectangle, setIsRectangle] = useState(window.innerHeight < 550);
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme,lang,setLang }}>
+    <ThemeContext.Provider value={{ theme, setTheme,lang,setLang,isRectangle,setIsRectangle }}>
       {children}
     </ThemeContext.Provider>
   );
