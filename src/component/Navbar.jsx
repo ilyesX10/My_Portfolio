@@ -18,6 +18,7 @@ export default function Navbar(){
     const [menuClick,setMenuClick] = useState(false);
     const {lang,setLang} = useContext(ThemeContext);
     const {theme, setTheme} = useContext(ThemeContext);
+    const [isRectangle, setIsRectangle] = useState(window.innerHeight < 550);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
     useEffect(() => {
         localStorage.setItem('theme', theme);
@@ -28,6 +29,7 @@ export default function Navbar(){
     useEffect(() => {
         function handleResize() {
             setIsMobile(window.innerWidth < 1024);
+            setIsRectangle(window.innerHeight < 550)
             setMenuClick(false);
         }
         window.addEventListener("resize", handleResize);
@@ -44,9 +46,9 @@ export default function Navbar(){
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 0.3 }}
-                    className="list-none overflow-hidden lg:col-span-3 col-span-6 lg:order-2 order-5 lg:justify-center"
+                    className={`list-none z-[-1] ${menuClick && !isRectangle && "overflow-hidden"} ${menuClick && isRectangle && "max-h-40 overflow-scroll"} lg:col-span-3 col-span-6 lg:order-2 order-5 lg:justify-center`}
                   >
-                    {mySiteInfo[lang].nav.map((e,index)=><motion.li variants={ulItem} key={e} className="flex py-2 justify-center"><a href={`#${mySiteInfo["En"].nav[index]}`} className={`${lang =="Fr"|| lang =="En"? "xl:text-base lg:text-sm text-3xl":"xl:text-xl lg:text-base text-3xl"} lg:drop-shadow-none drop-shadow-[0_0_0.5px_black] mx-4 dark:text-gray-300 text-slate-700 hover:text-white transition-all font-bold`} onClick={()=>setMenuClick((prev)=>false)}>{e}</a></motion.li>)}
+                    {mySiteInfo[lang].nav.map((e,index)=><motion.li variants={ulItem} key={e} className={`flex py-2 justify-center ${lang =="Fr"|| lang =="En"? "xl:text-base lg:text-sm text-3xl":"xl:text-xl lg:text-base text-3xl"}`}><a href={`#${mySiteInfo["En"].nav[index]}`} className={`${menuClick && isRectangle && "text-sm"} lg:drop-shadow-none drop-shadow-[0_0_0.5px_black] mx-4 dark:text-gray-300 text-slate-700 hover:text-white transition-all font-bold`} onClick={()=>setMenuClick((prev)=>false)}>{e}</a></motion.li>)}
                   </motion.ul>
                 )
             ) : (
