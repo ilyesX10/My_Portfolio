@@ -16,7 +16,7 @@ function Roadmap() {
       <div dir="ltr">
         <VerticalTimeline className="p-4" lineColor="#6366F1">
         <VerticalTimelineElement
-          date={<span className={`text-7xl flex ${lang == "Ar"? "justify-start":"justify-end"} md:justify-center font-bold`}>{curriculum[lang][0].year}</span>}
+          date={<span className={`text-3xl md:text-7xl flex ${lang == "Ar"? "justify-start":"justify-end"} md:justify-center font-bold`}>{curriculum[lang][0].year}</span>}
             contentStyle={{
               background: "#6366F1",
               color: "white",
@@ -33,7 +33,7 @@ function Roadmap() {
           </VerticalTimelineElement>
 
           <VerticalTimelineElement 
-            date={<span className={`text-7xl flex ${lang == "Ar"? "justify-start":"justify-end"} md:justify-center font-bold`}>{curriculum[lang][1].year}</span>}
+            date={<span className={`text-3xl md:text-7xl flex ${lang == "Ar"? "justify-start":"justify-end"} md:justify-center font-bold`}>{curriculum[lang][1].year}</span>}
             contentStyle={{
               background: "#6366F1",
               color: "white",
@@ -52,7 +52,7 @@ function Roadmap() {
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
-            date={<span className={`text-7xl flex ${lang == "Ar"? "justify-start":"justify-end"} md:justify-center font-bold`}>{curriculum[lang][2].year}</span>}
+            date={<span className={`text-3xl md:text-7xl flex ${lang == "Ar"? "justify-start":"justify-end"} md:justify-center font-bold`}>{curriculum[lang][2].year}</span>}
             title="Front-End Journey"
             contentStyle={{
               background: "#6366F1",

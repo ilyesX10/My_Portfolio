@@ -13,3 +13,6 @@ html, body {
   font-family: 'LatinFont';
   src: url('./assets/fonts/FiraCode.ttf') format('truetype');
 }
+@theme {
+  --breakpoint-xs: 480px;
+}

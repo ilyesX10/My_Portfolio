@@ -55,21 +55,21 @@ export default function Contact(){
                         <motion.p initial={{opacity:0,x:-50}} transition={{duration:0.8}} whileInView={{opacity:1,x:0}} className="text-justify text-base font-bold mb-4">{contactInfo[lang].paragraph}</motion.p>
                         <motion.div initial={{opacity:0,x:-50}} transition={{duration:0.8,delay:0.3}} whileInView={{opacity:1,x:0}} className="flex gap-2 flex-col py-4">
                             <div className="flex items-center gap-2 text-white">
-                                <HiOutlineMail className="w-12 h-12 bg-indigo-500 p-2 rounded-xl" size={32}/>
+                                <HiOutlineMail className="w-12 h-12 bg-indigo-500 p-2 rounded-xl xs:block hidden" size={32}/>
                                 <div className="flex flex-col p-2">
                                     <div className="dark:text-gray-300 text-slate-800">{contactInfo[lang].emailLabel}</div>
                                     <div className="dark:text-white text-slate-700 font-extrabold">{contactInfo[lang].email}</div>
                                 </div>
                             </div>
                             <div className="flex items-center gap-2 text-white">
-                                 <FiPhone className="w-12 h-12 bg-indigo-500 p-2 rounded-xl" size={32}/>
+                                 <FiPhone className="w-12 h-12 bg-indigo-500 p-2 rounded-xl xs:block hidden" size={32}/>
                                 <div className="flex flex-col p-2">
                                     <div className="dark:text-gray-300 text-slate-800">{contactInfo[lang].phoneLabel}</div>
                                     <div dir="ltr" className="dark:text-white text-slate-700 font-extrabold">{contactInfo[lang].phone}</div>
                                 </div>
                             </div>
                             <div className="flex items-center gap-2 text-white">
-                                 <FiMapPin className="w-12 h-12 bg-indigo-500 p-2 rounded-xl" size={32}/>
+                                 <FiMapPin className="w-12 h-12 bg-indigo-500 p-2 rounded-xl xs:block hidden" size={32}/>
                                 <div className="flex flex-col p-2">
                                     <div className="dark:text-gray-300 text-slate-800">{contactInfo[lang].addressLabel}</div>
                                     <div dir="ltr" className="dark:text-white text-slate-700 font-extrabold">{contactInfo[lang].address}</div>
@@ -80,11 +80,11 @@ export default function Contact(){
                     <motion.form onSubmit={handleSend} initial={{opacity:0,y:50}} transition={{duration:0.8}} whileInView={{opacity:1,y:0}} className="flex flex-col gap-6 xl:w-full sm:w-[90%] w-full m-auto">
                         <div className="flex gap-2 text-xs lg:text-sm md:text-base">
                             <div className="grid grid-cols-2 gap-4 w-full">
-                                <div className="flex flex-col">
+                                <div className="col-span-2 xs:col-span-1 flex flex-col">
                                     <label className="py-1" htmlFor="fullName">{contactForm[lang].label1}</label>
                                     <input required onChange={(e) => setFormData({...formData, fullName: e.target.value})} className="h-12 p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" type="text" id="fullName" placeholder={`${contactForm[lang].placeH1}`}/>
                                 </div>
-                                <div className="flex flex-col">
+                                <div className="col-span-2 xs:col-span-1 flex flex-col">
                                     <label className="py-1" htmlFor="Email">{contactForm[lang].label2}</label>
                                     <input required onChange={(e) => setFormData({...formData, email: e.target.value})} className="h-12 p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" type="email" id="Email" placeholder={`${contactForm[lang].placeH2}`}/>
                                 </div>
