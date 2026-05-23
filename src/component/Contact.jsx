@@ -55,21 +55,21 @@ export default function Contact(){
                         <motion.p initial={{opacity:0,x:-50}} transition={{duration:0.8}} whileInView={{opacity:1,x:0}} className="text-justify text-base font-bold mb-4">{contactInfo[lang].paragraph}</motion.p>
                         <motion.div initial={{opacity:0,x:-50}} transition={{duration:0.8,delay:0.3}} whileInView={{opacity:1,x:0}} className="flex gap-2 flex-col py-4">
                             <div className="flex items-center gap-2 text-white">
-                                <HiOutlineMail className="w-12 h-12 bg-indigo-500 p-2 rounded-xl xs:block hidden" size={32}/>
+                                <HiOutlineMail className="xs:w-12 xs:h-12 bg-indigo-500 xs:p-2 w-8 h-8 p-1 rounded-xl 2xs:block hidden"/>
                                 <div className="flex flex-col p-2">
                                     <div className="dark:text-gray-300 text-slate-800">{contactInfo[lang].emailLabel}</div>
                                     <div className="dark:text-white text-slate-700 font-extrabold">{contactInfo[lang].email}</div>
                                 </div>
                             </div>
                             <div className="flex items-center gap-2 text-white">
-                                 <FiPhone className="w-12 h-12 bg-indigo-500 p-2 rounded-xl xs:block hidden" size={32}/>
+                                 <FiPhone className="xs:w-12 xs:h-12 bg-indigo-500 xs:p-2 w-8 h-8 p-1 rounded-xl 2xs:block hidden"/>
                                 <div className="flex flex-col p-2">
                                     <div className="dark:text-gray-300 text-slate-800">{contactInfo[lang].phoneLabel}</div>
                                     <div dir="ltr" className="dark:text-white text-slate-700 font-extrabold">{contactInfo[lang].phone}</div>
                                 </div>
                             </div>
                             <div className="flex items-center gap-2 text-white">
-                                 <FiMapPin className="w-12 h-12 bg-indigo-500 p-2 rounded-xl xs:block hidden" size={32}/>
+                                 <FiMapPin className="xs:w-12 xs:h-12 bg-indigo-500 xs:p-2 w-8 h-8 p-1 rounded-xl 2xs:block hidden"/>
                                 <div className="flex flex-col p-2">
                                     <div className="dark:text-gray-300 text-slate-800">{contactInfo[lang].addressLabel}</div>
                                     <div dir="ltr" className="dark:text-white text-slate-700 font-extrabold">{contactInfo[lang].address}</div>

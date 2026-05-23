@@ -38,7 +38,7 @@ export default function Navbar(){
         };}, []);
     return(
         <nav className={`${theme} fixed top-0 right-0 ${menuClick && "h-[100vh]"} left-0 z-50 backdrop-blur-2xl dark:bg-slate-transparent bg-transparent ${lang =="Ar"? "font-[ArabicFont]":"font-[LatinFont]"} border-b-4 dark:border-indigo-300 border-slate-700 grid grid-cols-6 ${menuClick && "grid-rows-3"} items-center py-4`}>
-            <motion.span initial={{opacity:0,y:-50}} transition={{duration:0.8}} whileInView={{opacity:1,y:0}} className={`lg:col-span-1 col-span-4 order-1 dark:drop-shadow-[0_0_0.5px_black] drop-shadow-[0_0_0.5px_white] dark:text-white text-slate-700 flex lg:justify-center justify-start px-2 xl:text-2xl lg:text-base xs:text-2xl text-base font-extrabold bg-transparent`}>&lt; {person[lang].logo}/ &gt;</motion.span>
+            <motion.span initial={{opacity:0,y:-50}} transition={{duration:0.8}} animate={{opacity:1,y:0}}  className={`lg:col-span-1 col-span-4 order-1 dark:drop-shadow-[0_0_0.5px_black] drop-shadow-[0_0_0.5px_white] dark:text-white text-slate-700 flex lg:justify-center justify-start px-2 xl:text-2xl lg:text-base xs:text-2xl text-base font-extrabold bg-transparent`}>&lt; {person[lang].logo}/ &gt;</motion.span>
             {isMobile ? (
                 menuClick && (
                   <motion.ul
@@ -63,15 +63,15 @@ export default function Navbar(){
                     <span className={`text-base text-gray-300 hover:cursor-pointer ${lang == "Fr"? "bg-indigo-700":"bg-transparent"} rounded-full font-bold px-3 py-1`} onClick={()=>{setLang((prev)=>"Fr")}}>Fr</span>
                 </div>
             </motion.div>
-            <motion.div initial={{scale:.8,opacity:0}} transition={{duration:0.8}} whileInView={{scale:1,opacity:1}} className={`col-span-1 flex lg:justify-center justify-end lg:order-4 order-3`}>
+            <motion.div initial={{scale:.8,opacity:0}} transition={{duration:0.8}} whileInView={{scale:1,opacity:1}} className={`col-span-1 flex lg:justify-center justify-end lg:order-4 order-3 2xs:scale-100 scale-80`}>
                 <div className="flex justify-between bg-indigo-400 dark:bg-slate-800 rounded-full dark:border-white border-slate-700 border-1 p-1" onClick={()=>{setTheme((prev)=> prev == "light" ? "dark":"light")}}>
                     <Sun className={`${theme == "dark"? "bg-indigo-700":"bg-transparent"} rounded-full px-1 hover:cursor-pointer`} color="white"/>
                     <Moon className={`${theme == "light"? "bg-indigo-700":"bg-transparent"} rounded-full px-1 hover:cursor-pointer`} color="white"/>
                 </div>
             </motion.div>
             <motion.div initial={{y:-50,opacity:0}} transition={{duration:0.8}} whileInView={{y:0,opacity:1}} className={`lg:hidden col-span-1 flex justify-end px-2 items-center order-4`}>
-                <Menu className={`${menuClick && "hidden"} dark:drop-shadow-[0_0_0.5px_black] drop-shadow-[0_0_0.5px_white] hover:cursor-pointer border-2 dark:border-white border-slate-700 dark:text-white text-slate-700 p-1`} size={40} onClick={()=>{setMenuClick((prev)=>!prev)}}/>
-                <X className={`${!menuClick && "hidden"} dark:drop-shadow-[0_0_0.5px_black] drop-shadow-[0_0_0.5px_white] hover:cursor-pointer border-2 dark:border-white border-slate-700 dark:text-white text-slate-700 p-1`} size={40} onClick={()=>{setMenuClick((prev)=>!prev)}}/>
+                <Menu className={`${menuClick && "hidden"} dark:drop-shadow-[0_0_0.5px_black] drop-shadow-[0_0_0.5px_white] hover:cursor-pointer border-2 dark:border-white border-slate-700 dark:text-white text-slate-700 p-1 w-7 h-7 2xs:w-10 2xs:h-10`} onClick={()=>{setMenuClick((prev)=>!prev)}}/>
+                <X className={`${!menuClick && "hidden"} dark:drop-shadow-[0_0_0.5px_black] drop-shadow-[0_0_0.5px_white] hover:cursor-pointer border-2 dark:border-white border-slate-700 dark:text-white text-slate-700 p-1 w-7 h-7 2xs:w-10 2xs:h-10`} onClick={()=>{setMenuClick((prev)=>!prev)}}/>
             </motion.div>
         </nav>
     );

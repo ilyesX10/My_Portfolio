@@ -21,7 +21,7 @@ export default function Header(){
                 <p className={`sm:text-xl text-base my-8`}>
                     {person[lang].aboutMe}
                 </p>
-                <div className={`flex gap-4 sm:text-xl text-sm my-2`}>
+                <div className={`flex 2xs:flex-row flex-col gap-4 sm:text-xl text-sm my-2`}>
                     <motion.button  whileTap={{scale:0.9}} transition={{type:"spring"}} className="sm:text-base text-xs px-3 py-2 text-gray-300 dark:bg-slate-800 bg-indigo-500 hover:cursor-pointer rounded-lg border-r-6 border-b-6 border-indigo-900 dark:border-slate-900" type="button" onMouseEnter={()=>{setHoverBtn1(prev=>true)}} onMouseLeave={()=>{setHoverBtn1(prev=>false)}}>{mySiteInfo[lang].headerBtn[0]} <span className={`inline-block relative transition-all ${lang !="Ar"? isHoverBtn1 ? "left-1":"left-0" : isHoverBtn1 ? "right-1":"right-0"}`}>{lang != "Ar"? "→" : "←"}</span></motion.button>
                     <motion.button whileTap={{scale:0.9}} transition={{type:"spring"}} className="sm:text-base text-xs px-3 py-2 text-gray-300 dark:bg-slate-800 bg-indigo-500 hover:cursor-pointer rounded-lg border-r-6 border-b-6 border-indigo-900 dark:border-slate-900" type="button" onMouseEnter={()=>{setHoverBtn2(prev=>true)}} onMouseLeave={()=>{setHoverBtn2(prev=>false)}}>{mySiteInfo[lang].headerBtn[1]} <span className={`inline-block relative transition-all ${lang !="Ar"? isHoverBtn2 ? "left-1":"left-0" : isHoverBtn2 ? "right-1":"right-0"}`}>{lang != "Ar"? "→" : "←"}</span></motion.button>
                 </div>

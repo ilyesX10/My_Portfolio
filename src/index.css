@@ -15,4 +15,5 @@ html, body {
 }
 @theme {
   --breakpoint-xs: 480px;
+  --breakpoint-2xs: 330px;
 }
