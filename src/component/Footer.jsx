@@ -7,11 +7,11 @@ import { FaLinkedin,FaGithub  } from "react-icons/fa";
 export default function Footer(){
     const {lang} = useContext(ThemeContext)
     return(
-        <footer className="text-sm md:text-base sm:flex-row flex justify-between items-center flex-col py-6 px-12 bg-indigo-300 text-slate-700 dark:text-white font-semibold dark:bg-slate-700 border-t-4 dark:border-indigo-300 border-slate-700">
+        <footer className="text-sm md:text-base sm:flex-row flex justify-between items-center flex-col py-6 sm:px-12 px-0 bg-indigo-300 text-slate-700 dark:text-white font-semibold dark:bg-slate-700 border-t-4 dark:border-indigo-300 border-slate-700">
             <span className="sm:flex-row flex justify-center items-center">
                 {footerInfo[lang].logo}
             </span>
-            <p className="flex justify-center items-center">
+            <p className="flex justify-center items-center xs:text-sm text-xs md:text-base">
                 <span className="text-2xl relative top-[1px] mx-1">&copy;</span>
                 {footerInfo[lang].paragraph}
             </p>
