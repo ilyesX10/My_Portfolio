@@ -48,7 +48,7 @@ export default function Contact(){
     }
     };
     return(
-            <section id="Contact" className={`${theme} dark:bg-slate-700 bg-indigo-300 p-4 sm:text-4xl text-2xl dark:text-gray-100 text-slate-700`}>
+            <section id="Contact" className={`${theme} dark:bg-slate-700 bg-indigo-300 p-4 pb-10 sm:text-4xl text-2xl dark:text-gray-100 text-slate-700`}>
                 <h1 className="py-6 font-extrabold">// {mySiteInfo[lang].nav[4]}</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div className="text-base">
