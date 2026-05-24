@@ -7,12 +7,14 @@ import Roadmap from './component/Roadmap';
 import Skills from './component/Skills';
 import Contact from './component/Contact';
 import Navbar from "./component/Navbar";
+import Footer from './component/Footer';
 
 function App() {
   const {lang,setLang} = useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext)
   return (
     <>
-      <div dir={`${lang == "Ar"? "rtl":"ltr"}`} className={`overflow-x-hidden ${lang =="Ar"? "font-[ArabicFont]":"font-[LatinFont] overflow-y-hidden"}`}>
+      <div dir={`${lang == "Ar"? "rtl":"ltr"}`} className={`${theme} overflow-x-hidden ${lang =="Ar"? "font-[ArabicFont]":"font-[LatinFont] overflow-y-hidden"}`}>
         <Navbar/>
         <Header/>
           <main>
@@ -20,6 +22,7 @@ function App() {
             <Skills/>
             <Contact/>
           </main>
+          <Footer/>
       </div>
     </>
   )

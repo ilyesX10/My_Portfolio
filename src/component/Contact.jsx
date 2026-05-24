@@ -82,21 +82,21 @@ export default function Contact(){
                             <div className="grid grid-cols-2 gap-4 w-full">
                                 <div className="col-span-2 xs:col-span-1 flex flex-col">
                                     <label className="py-1" htmlFor="fullName">{contactForm[lang].label1}</label>
-                                    <input required onChange={(e) => setFormData({...formData, fullName: e.target.value})} className="h-12 p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" type="text" id="fullName" placeholder={`${contactForm[lang].placeH1}`}/>
+                                    <input required onChange={(e) => setFormData({...formData, fullName: e.target.value})} className="sm:placeholder:text-lg placeholder:text-sm h-12 p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" type="text" id="fullName" placeholder={`${contactForm[lang].placeH1}`}/>
                                 </div>
                                 <div className="col-span-2 xs:col-span-1 flex flex-col">
                                     <label className="py-1" htmlFor="Email">{contactForm[lang].label2}</label>
-                                    <input required onChange={(e) => setFormData({...formData, email: e.target.value})} className="h-12 p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" type="email" id="Email" placeholder={`${contactForm[lang].placeH2}`}/>
+                                    <input required onChange={(e) => setFormData({...formData, email: e.target.value})} className="sm:placeholder:text-lg placeholder:text-sm h-12 p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" type="email" id="Email" placeholder={`${contactForm[lang].placeH2}`}/>
                                 </div>
                             </div>
                         </div>
                         <div className="flex flex-col text-lg md:text-lg">
                             <label className="py-1" htmlFor="subject">{contactForm[lang].label3}</label>
-                            <input required onChange={(e) => setFormData({...formData, subject: e.target.value})} className="h-12 p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" type="text" id="subject" placeholder={`${contactForm[lang].placeH3}`}/>
+                            <input required onChange={(e) => setFormData({...formData, subject: e.target.value})} className="sm:placeholder:text-lg placeholder:text-sm h-12 p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" type="text" id="subject" placeholder={`${contactForm[lang].placeH3}`}/>
                         </div>
                         <div className="flex flex-col text-lg md:text-lg">
                             <label className="py-1" htmlFor="message">{contactForm[lang].label4}</label>
-                            <textarea required onChange={(e) => setFormData({...formData, message: e.target.value})} className="h-32 resize-none p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" id="message" placeholder={`${contactForm[lang].placeH4}`}/>
+                            <textarea required onChange={(e) => setFormData({...formData, message: e.target.value})} className="sm:placeholder:text-lg placeholder:text-sm h-32 resize-none p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" id="message" placeholder={`${contactForm[lang].placeH4}`}/>
                         </div>
                         <div className="flex flex-col text-lg md:text-lg">
                             <motion.button disabled={sending} whileTap={{scale:0.95}} transition={{type:spring}} type="submit" className="h-12 p-2 border-b-3 border-white font-extrabold rounded-lg dark:bg-indigo-300 bg-indigo-600 dark:text-slate-700 text-gray-300">{contactForm[lang].btn}</motion.button>

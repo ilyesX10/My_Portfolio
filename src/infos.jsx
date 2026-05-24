@@ -154,4 +154,18 @@ const contactForm = {
         btn: "إرسال"
     }
 }
-export { person, mySiteInfo, curriculum, contactInfo,contactForm };
+const footerInfo = {
+    Ar: {
+        paragraph:"2026 جميع الحقوق محفوظة.",
+        logo:"درويش إلياس"
+    },
+    Fr: {
+        paragraph:"2026 Tous droits réservés.",
+        logo:"Drouiche Ilyes"
+    },
+    En: {
+        paragraph:"2026 All rights reserved.",
+        logo:"Drouiche Ilyes"
+    }
+}
+export { person, mySiteInfo, curriculum, contactInfo,contactForm,footerInfo };
