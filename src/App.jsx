@@ -8,7 +8,7 @@ import Skills from './component/Skills';
 import Contact from './component/Contact';
 import Navbar from "./component/Navbar";
 import Footer from './component/Footer';
-
+import { ScrollProvider } from './ScrollProvider';
 function App() {
   const {lang,setLang} = useContext(ThemeContext);
   const {theme} = useContext(ThemeContext)
@@ -16,12 +16,14 @@ function App() {
     <>
       <div dir={`${lang == "Ar"? "rtl":"ltr"}`} className={`${theme} overflow-x-hidden ${lang =="Ar"? "font-[ArabicFont]":"font-[LatinFont] overflow-y-hidden"}`}>
         <Navbar/>
-        <Header/>
-          <main>
-            <Roadmap/>
-            <Skills/>
-            <Contact/>
-          </main>
+          <ScrollProvider>
+            <Header/>
+              <main>
+                <Roadmap/>
+                <Skills/>
+                <Contact/>
+              </main>
+          </ScrollProvider>
           <Footer/>
       </div>
     </>

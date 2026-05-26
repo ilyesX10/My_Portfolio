@@ -5,6 +5,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FiPhone,FiMapPin  } from "react-icons/fi";
 import { motion, spring } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { ScrollContext } from "../ScrollContext";
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -12,6 +13,7 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 export default function Contact(){
     const {lang} = useContext(ThemeContext)
     const {theme} = useContext(ThemeContext)
+    const {inputRef,sectionRef} = useContext(ScrollContext)
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -48,12 +50,12 @@ export default function Contact(){
     }
     };
     return(
-            <section id="Contact" className={`${theme} dark:bg-slate-700 bg-indigo-300 p-4 pb-10 sm:text-4xl text-2xl dark:text-gray-100 text-slate-700`}>
+            <section id="Contact" ref={sectionRef} className={`${theme} dark:bg-slate-700 bg-indigo-300 p-4 pb-10 sm:text-4xl text-2xl dark:text-gray-100 text-slate-700`}>
                 <h1 className="py-6 font-extrabold">// {mySiteInfo[lang].nav[4]}</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div className="text-base">
-                        <motion.p initial={{opacity:0,x:-50}} transition={{duration:0.8}} whileInView={{opacity:1,x:0}} className="text-justify text-base font-bold mb-4">{contactInfo[lang].paragraph}</motion.p>
-                        <motion.div initial={{opacity:0,x:-50}} transition={{duration:0.8,delay:0.3}} whileInView={{opacity:1,x:0}} className="flex gap-2 flex-col py-4">
+                        <motion.p initial={{opacity:0,y:-50}} transition={{duration:0.8}} whileInView={{opacity:1,y:0}} className="text-justify text-base font-bold mb-4">{contactInfo[lang].paragraph}</motion.p>
+                        <motion.div initial={{opacity:0,y:-50}} transition={{duration:0.8,delay:0.3}} whileInView={{opacity:1,y:0}} className="flex gap-2 flex-col py-4">
                             <div className="flex items-center gap-2 text-white">
                                 <HiOutlineMail className="xs:w-12 xs:h-12 bg-indigo-500 xs:p-2 w-8 h-8 p-1 rounded-xl 2xs:block hidden"/>
                                 <div className="flex flex-col p-2">
@@ -82,7 +84,7 @@ export default function Contact(){
                             <div className="grid grid-cols-2 gap-4 w-full">
                                 <div className="col-span-2 xs:col-span-1 flex flex-col">
                                     <label className="py-1" htmlFor="fullName">{contactForm[lang].label1}</label>
-                                    <input required onChange={(e) => setFormData({...formData, fullName: e.target.value})} className="sm:placeholder:text-lg placeholder:text-sm h-12 p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" type="text" id="fullName" placeholder={`${contactForm[lang].placeH1}`}/>
+                                    <input ref={inputRef} required onChange={(e) => setFormData({...formData, fullName: e.target.value})} className="sm:placeholder:text-lg placeholder:text-sm h-12 p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" type="text" id="fullName" placeholder={`${contactForm[lang].placeH1}`}/>
                                 </div>
                                 <div className="col-span-2 xs:col-span-1 flex flex-col">
                                     <label className="py-1" htmlFor="Email">{contactForm[lang].label2}</label>

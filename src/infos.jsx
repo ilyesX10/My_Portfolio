@@ -168,4 +168,8 @@ const footerInfo = {
         logo:"Drouiche Ilyes"
     }
 }
-export { person, mySiteInfo, curriculum, contactInfo,contactForm,footerInfo };
+const contactLinks = {
+    linkedin : "",
+    github : "https://github.com/ilyesX10",
+}
+export { person, mySiteInfo, curriculum, contactInfo,contactForm,footerInfo,contactLinks };

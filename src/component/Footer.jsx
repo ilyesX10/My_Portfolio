@@ -1,4 +1,4 @@
-import { footerInfo } from "../infos";
+import { footerInfo,contactLinks } from "../infos";
 import { ThemeContext } from "../ThemeContext";
 import { useContext } from "react";
 import { FaLinkedin,FaGithub  } from "react-icons/fa";
@@ -16,8 +16,8 @@ export default function Footer(){
                 {footerInfo[lang].paragraph}
             </p>
             <div className="flex justify-center items-center gap-2">
-                <a href=""><FaLinkedin className="dark:text-gray-300 text-slate-700 w-6 h-6" /></a>
-                <a href=""><FaGithub  className="dark:text-gray-300 text-slate-700 w-6 h-6"/></a> 
+                <a href={``}><FaLinkedin className="dark:text-gray-300 text-slate-700 w-6 h-6" /></a>
+                <a href={`${contactLinks.github}`}><FaGithub  className="dark:text-gray-300 text-slate-700 w-6 h-6"/></a> 
             </div>
         </footer>
     );
