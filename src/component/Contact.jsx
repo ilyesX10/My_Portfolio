@@ -101,7 +101,7 @@ export default function Contact(){
                             <textarea required onChange={(e) => setFormData({...formData, message: e.target.value})} className="sm:placeholder:text-lg placeholder:text-sm h-32 resize-none p-2 rounded-lg bg-indigo-500 text-gray-200 outline-none ring-2 ring-transparent transition-all dark:focus:ring-white/50 focus:ring-indigo-700/50" id="message" placeholder={`${contactForm[lang].placeH4}`}/>
                         </div>
                         <div className="flex flex-col text-lg md:text-lg">
-                            <motion.button disabled={sending} whileTap={{scale:0.95}} transition={{type:spring}} type="submit" className="h-12 p-2 border-b-3 border-white font-extrabold rounded-lg dark:bg-indigo-300 bg-indigo-600 dark:text-slate-700 text-gray-300">{contactForm[lang].btn}</motion.button>
+                            <motion.button disabled={sending} whileTap={{scale:0.95}} transition={{type:spring}} type="submit" className="hover:cursor-pointer h-12 p-2 border-b-3 border-white font-extrabold rounded-lg dark:bg-indigo-300 bg-indigo-600 dark:text-slate-700 text-gray-300">{contactForm[lang].btn}</motion.button>
                         </div>
                     </motion.form>
                 </div>
