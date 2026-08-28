@@ -169,7 +169,7 @@ const footerInfo = {
     }
 }
 const contactLinks = {
-    linkedin : "",
+    linkedin : "https://www.linkedin.com/in/drouiche-ilyes-97a53125a/",
     github : "https://github.com/ilyesX10",
 }
 export { person, mySiteInfo, curriculum, contactInfo,contactForm,footerInfo,contactLinks };
