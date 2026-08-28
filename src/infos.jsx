@@ -171,5 +171,6 @@ const footerInfo = {
 const contactLinks = {
     linkedin : "https://www.linkedin.com/in/drouiche-ilyes-97a53125a/",
     github : "https://github.com/ilyesX10",
+    resume : "https://drive.google.com/file/d/1PYF8Srl4VWydH2SB58LJVLtW9IMzELmB/view?usp=sharing" 
 }
 export { person, mySiteInfo, curriculum, contactInfo,contactForm,footerInfo,contactLinks };
