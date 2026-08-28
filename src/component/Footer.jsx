@@ -16,7 +16,7 @@ export default function Footer(){
                 {footerInfo[lang].paragraph}
             </p>
             <div className="flex justify-center items-center gap-2">
-                <a href={``}><FaLinkedin className="dark:text-gray-300 text-slate-700 w-6 h-6" /></a>
+                <a href={`contactLinks.linkdedin`}><FaLinkedin className="dark:text-gray-300 text-slate-700 w-6 h-6" /></a>
                 <a href={`${contactLinks.github}`}><FaGithub  className="dark:text-gray-300 text-slate-700 w-6 h-6"/></a> 
             </div>
         </footer>
